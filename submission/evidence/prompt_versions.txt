@@ -1,0 +1,7 @@
+Langfuse Prompt day13-chat Versions:
+- Version 1:
+  Text: "Feature={{feature}}\nDocs={{docs}}\nQuestion={{message}}"
+  Labels: ["baseline", "production"] (after rollback)
+- Version 2:
+  Text: "Feature={{feature}}\nDocs={{docs}}\nQuestion={{message}}\n(Answer concisely in Vietnamese please.)"
+  Labels: ["candidate"]

@@ -1,0 +1,16 @@
+Challenge Investigation Evidence:
+- Challenge ID: day13-k4-observability-v1
+- Affected Feature: monitoring
+- Injected Incident: rag_slow
+- Incident Symptom: P95 Latency spike in dashboard to ~4.6s (and ~15s when blocked sequentially).
+- Lỗi/Bottleneck phát hiện:
+  1. Synchronous sleep(2.5) in retrieve() in app/mock_rag.py when rag_slow state is enabled.
+  2. Async FastAPI handler '/chat' blocked by sync sleep inside event loop.
+- Trace ID liên quan: req-c6121377
+- Log line/Correlation ID: req-c6121377 with latency_ms: 2650ms.
+- Fix Action:
+  1. Changed chat handler in app/main.py from 'async def' to 'def' to execute in threadpool concurrently.
+  2. Disabled incident 'rag_slow' using inject_incident.py.
+- Preventive Measure:
+  1. Add latency alert rule if P95 latency > 3000ms.
+  2. Set SLO on retrieve span to be < 500ms.

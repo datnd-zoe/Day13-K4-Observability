@@ -1,0 +1,11 @@
+Langfuse Traces List:
+1. Trace ID: req-0a901aac | Name: day13-chat | Version: 1 | Label: baseline
+2. Trace ID: req-f379d445 | Name: day13-chat | Version: 2 | Label: candidate
+3. Trace ID: req-ab1eda15 | Name: day13-chat | Version: 1 | Label: production
+4. Trace ID: req-9a452b00 | Name: day13-chat | Version: 2 | Label: production
+5. Trace ID: req-66f0b222 | Name: day13-chat | Version: 1 | Label: production (Rolled back)
+6. Trace ID: req-3a16188b | Name: day13-chat | Version: 1 | Label: production
+7. Trace ID: req-4b08683a | Name: day13-chat | Version: 1 | Label: production
+8. Trace ID: req-3bdaf74e | Name: day13-chat | Version: 1 | Label: production
+9. Trace ID: req-47d12c4b | Name: day13-chat | Version: 1 | Label: production
+10. Trace ID: req-80cc3115 | Name: day13-chat | Version: 1 | Label: production

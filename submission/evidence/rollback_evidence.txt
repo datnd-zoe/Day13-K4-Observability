@@ -1,0 +1,3 @@
+Rollback and Label Change Evidence:
+- Event 1: Version 2 promoted to 'production' label (v2 labels: ['candidate', 'production']). Trace ID: req-9a452b00 uses Version 2.
+- Event 2: Production label rolled back to Version 1 (v1 labels: ['baseline', 'production'], v2 labels: ['candidate']). Trace ID: req-66f0b222 uses Version 1.
